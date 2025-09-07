@@ -260,21 +260,10 @@ impl eframe::App for Gui {
         }
 
         let theme = ctx.theme();
-        let focused = ctx.input(|i| i.focused);
 
         egui::CentralPanel::default()
             .frame(egui::Frame::central_panel(&ctx.style()).inner_margin(Margin::same(14)))
             .show(ctx, |ui| {
-                if !focused {
-                    ui.with_layout(
-                        Layout::centered_and_justified(Direction::LeftToRight),
-                        |ui| {
-                            ui.label(":)");
-                        },
-                    );
-                    return;
-                }
-
                 egui::ScrollArea::vertical().show(ui, |ui| {
                     if self.show_desktop_preview {
                         Self::add_section_header(
