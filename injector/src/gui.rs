@@ -2,8 +2,8 @@ use crate::native::{self, WindowInfo};
 use eframe::{
     Renderer,
     egui::{
-        self, Atom, AtomExt, Color32, ColorImage, Direction, FontData, FontDefinitions, FontFamily,
-        FontId, IconData, Image, Layout, Margin, RichText, TextStyle, Theme, Vec2,
+        self, Atom, AtomExt, Color32, ColorImage, FontData, FontDefinitions, FontFamily,
+        FontId, IconData, Image, Margin, RichText, TextStyle, Theme, Vec2,
     },
 };
 use image::{GenericImageView, ImageFormat, ImageReader};
